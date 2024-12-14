@@ -1,0 +1,71 @@
+/* Basic Styling for Nav Links */
+.navbar-nav .nav-link {
+  font-weight: normal !important;
+  font-size: 20px !important;
+}
+
+/* Adjust the body padding for navbar */
+body {
+padding-top: 70px; /* Adjust this value based on navbar height */
+}
+
+/* Logo Styling */
+.custom-logo {
+font-family: 'Merriweather', serif;
+font-size: 28px;
+font-weight: bold;
+text-decoration: none;
+}
+
+.custom-logo:hover {
+color: #b02a37; /* Slightly darker red on hover */
+}
+
+/* Button Styling */
+.custom-apply-btn {
+font-family: 'Merriweather', serif !important;
+font-size: 16px;
+font-weight: 600;
+padding: 8px 20px;
+border: 2px solid #dc3545;
+color: #dc3545;
+background-color: transparent;
+transition: all 0.3s ease-in-out;
+}
+
+.custom-apply-btn:hover {
+background-color: #dc3545;
+color: #fff;
+border-color: #dc3545;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 991px) {
+/* Stack the contact info and button vertically on small screens */
+.custom-mobile-stack {
+  flex-direction: column;
+  align-items: flex-start !important; /* Align items to the left */
+
+}
+
+.custom-mobile-stack > * {
+  margin-top: -16px ;
+}
+
+.custom-apply-btn {
+  margin-left: 0 !important; 
+  margin-top: 0.5rem;/* Remove any left margin if exists */
+}
+}
+
+/* Large screen adjustments */
+@media (min-width: 992px) {
+  .custom-mobile-stack {
+    flex-direction: row;
+    align-items: center; /* Keep items aligned in a row */
+    justify-content: flex-end; /* Align items to the right in larger screens */
+  }
+.custom-apply-btn {
+  margin-left: 20px; /* Add margin between the phone number and button */
+}
+}
