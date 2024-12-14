@@ -1,0 +1,41 @@
+.custom-container {
+    padding: 2rem 1rem;
+    margin-top: -5rem !important;
+  }
+  
+  .custom-text-section {
+    padding: 1rem 2rem;
+  }
+  
+  .custom-heading {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: black !important;
+  }
+  
+  .custom-heading strong {
+    color: orange !important;
+  }
+  
+  .custom-paragraph {
+    font-size: 1rem;
+    color:black !important;
+    line-height: 1.6;
+  }
+  
+  .custom-image {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .custom-text-section {
+      text-align: left !important;
+      padding: 1rem;
+    }
+  
+    .custom-heading {
+      font-size: 1.5rem;
+    }
+  }
+  

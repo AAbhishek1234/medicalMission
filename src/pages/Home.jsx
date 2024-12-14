@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../components/Navbar'
  import Banner from '../components/Banner'
  import OurSuccess from '../components/OurSuccess'
+import JobReady from '../components/JobReady'
 
 function Home() {
   return (
@@ -9,6 +10,7 @@ function Home() {
     <Navbar></Navbar>
     <Banner></Banner>
     <OurSuccess></OurSuccess>
+    <JobReady></JobReady>
 </>
 
 

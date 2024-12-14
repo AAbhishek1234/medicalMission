@@ -29,7 +29,7 @@ const SuccessSection = () => {
       {/* Heading */}
       <Row className="justify-content-center">
         <Col md={8}>
-          <h1 className="fw-bold" style={{ color: "black", marginTop:"-2rem" }}>
+          <h1 className="fw-bold" style={{ color: "black", marginTop:"-1rem" }}>
             Our Success So Far
           </h1>
           <p className="mm-text-muted" style={{ color: "black" }}>
