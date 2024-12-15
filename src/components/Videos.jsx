@@ -30,7 +30,7 @@ const VideoCard = ({ videoSrc, name, title }) => {
 const VideoCardsSection = () => {
   const cardData = [
     {
-      videoSrc: "/Videos/bj.mp4",
+      videoSrc: "https://www.youtube.com/embed/tgbNymZ7vqY",
       name: "John Doe",
       title: "Healthcare Specialist",
     },
