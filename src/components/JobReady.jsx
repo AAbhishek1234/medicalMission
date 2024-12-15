@@ -4,7 +4,7 @@ import './jobready.css'; // Custom CSS file
 
 const JobReady = () => {
   return (
-    <Container fluid className="custom-container" >
+    <Container fluid className="custom-container bg-white" >
       <Row className="align-items-center my-5">
         {/* Image First for Mobile, Second for Desktop */}
         <Col xs={{ order: 1 }} md={{ span: 6, order: 2 }} className="custom-image-section text-center">

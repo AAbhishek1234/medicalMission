@@ -2,6 +2,7 @@
 .video-card {
     border-radius: 10px;
     overflow: hidden;
+    border: 2px solid white;
   }
   
   /* Mobile-Specific Styling */

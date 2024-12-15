@@ -6,6 +6,8 @@ import JobReady from '../components/JobReady'
 import Partners from '../components/Partners'
 import WhyStudent from '../components/WhyStudent'
 import Videos from '../components/Videos'
+import PlacementPage from '../components/PlacementPage'
+import Headlines from '../components/headlines'
 
 function Home() {
   return (
@@ -17,6 +19,8 @@ function Home() {
     <Partners></Partners>
     <WhyStudent></WhyStudent>
     <Videos></Videos>
+    <PlacementPage></PlacementPage>
+    <Headlines></Headlines>
 </>
 
 

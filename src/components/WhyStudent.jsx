@@ -37,7 +37,7 @@ const testimonials = [
 
 const StudentSlider = () => {
   return (
-    <Container fluid className="py-5  text-center">
+    <Container fluid className="py-5  text-center bg-white">
       {/* Heading */}
       <Row className="justify-content-center mb-4">
         <Col md={8}>

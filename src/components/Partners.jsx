@@ -17,7 +17,7 @@ const logos = [
 
 const Partners = () => {
   return (
-    <Container fluid className="logo-showcase-container py-5" style={{marginTop:"-4rem"}}>
+    <Container fluid className="logo-showcase-container py-5 bg-white" style={{marginTop:"-4rem"}}>
       <h1 className=" ugc-text-center mb-3" style={{fontWeight:"bold"}}>Our UGC Recognised Partners</h1>
       <p className="ugc-text-center mb-4">
         We partner with UGC recognised Higher Education Institutions in India for offering allied healthcare courses. Our courses are aligned with <br/>NSDC & NCrF learning outcomes that ensure training in industry-ready skills, and are recognised by statutory bodies.
