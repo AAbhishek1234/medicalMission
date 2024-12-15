@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
  import OurSuccess from '../components/OurSuccess'
 import JobReady from '../components/JobReady'
 import Partners from '../components/Partners'
+import WhyStudent from '../components/WhyStudent'
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
     <OurSuccess></OurSuccess>
     <JobReady></JobReady>
     <Partners></Partners>
+    <WhyStudent></WhyStudent>
 </>
 
 

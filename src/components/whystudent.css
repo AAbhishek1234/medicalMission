@@ -1,0 +1,64 @@
+/* Center align content */
+.testimonial-slider .carousel-item {
+    padding: 20px 0;
+    background-color: 		#FFF5EE !important;
+    border-radius: 15px;
+  }
+  
+  /* Image styling */
+  .rounded-circle {
+   
+  }
+  
+  /* Button styling */
+  button.rounded-circle {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    border-width: 2px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .fs-5 {
+      font-size: 0.9rem;
+    }
+  
+    .rounded-circle {
+      width: 60px;
+      height: 60px;
+    }
+  
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    h5 {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .fs-5 {
+      font-size: 0.8rem;
+    }
+  
+    .rounded-circle {
+      width: 50px;
+      height: 50px;
+    }
+  
+    h1 {
+      font-size: 1.2rem;
+    }
+  
+    h5 {
+      font-size: 0.9rem;
+    }
+  }
+  .x-fs-5{
+    color: black !important;
+  }

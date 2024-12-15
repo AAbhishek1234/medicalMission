@@ -84,7 +84,7 @@ const SuccessSection = () => {
 
         <Col xs={6} md={3} className="mb-4">
           <img
-            src="/Images/placement.png"
+            src="/Images/graph.png"
             alt="Placement Rate"
             style={{ width: "60px", height: "60px" }}
           />
