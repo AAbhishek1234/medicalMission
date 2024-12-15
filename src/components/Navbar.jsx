@@ -44,7 +44,7 @@ const CustomNavbar = () => {
     } else {
       setErrors({});
       handleClose(); // Close the modal
-      alert("Successfully Submitted!"); // Show success popup
+      //alert("Successfully Submitted!"); // Show success popup
       // Clear form fields
       setFormData({
         name: "",
