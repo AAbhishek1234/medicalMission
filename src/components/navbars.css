@@ -54,8 +54,13 @@ border-color: #dc3545;
 
 .custom-apply-btn {
   margin-left: 0 !important; 
-  margin-top: 0.5rem;/* Remove any left margin if exists */
+  margin-top: 0.5rem;
+  width: 50% !important;
+  /* Remove any left margin if exists */
 }
+}
+body {
+  overflow-x: hidden !important;
 }
 
 /* Large screen adjustments */
@@ -68,4 +73,9 @@ border-color: #dc3545;
 .custom-apply-btn {
   margin-left: 20px; /* Add margin between the phone number and button */
 }
+}
+@media (max-width: 768px){
+  .custom-apply-btn {
+    width: 50px !important;/* Add margin between the phone number and button */
+  }
 }

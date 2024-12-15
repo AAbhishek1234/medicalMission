@@ -35,10 +35,13 @@ const HeroSection = () => {
           <h1 className="display-4 fw-bold">Build a Progressive Career in</h1>
           <h1 className="nur-text-primary" style={{color:"black"}}>Nursing</h1>
           <div className="mt-4">
-            <Button variant="danger" className="me-2" >
-              Enquire Now
-            </Button>
-            <Button variant="outline-danger" >▶ Watch Video</Button>
+            {/* Add the tel: link to the button */}
+            <a href="tel:+917000000003">
+              <Button variant="danger" className="me-2">
+                Enquire Now
+              </Button>
+            </a>
+            <Button variant="outline-danger">▶ Watch Video</Button>
           </div>
         </Col>
 
@@ -66,5 +69,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
-
