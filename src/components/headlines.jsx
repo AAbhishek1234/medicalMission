@@ -8,9 +8,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useMediaQuery } from "react-responsive";
 import "./headlines.css";
 
-// Register the Autoplay module
-Swiper.use([Autoplay]);
-
 const CustomComponent = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
@@ -30,9 +27,10 @@ const CustomComponent = () => {
           spaceBetween={20}
           slidesPerView={1}
           autoplay={{
-            delay: 2000,
+            delay: 3000,
             disableOnInteraction: false,
           }}
+          modules={[Autoplay]} // Register the Autoplay module here
         >
           <SwiperSlide>
             <Card className="shadow border-0">
@@ -92,6 +90,3 @@ const CustomComponent = () => {
 };
 
 export default CustomComponent;
-
-
-
