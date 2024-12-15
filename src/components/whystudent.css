@@ -32,13 +32,7 @@
       height: 60px;
     }
   
-    h1 {
-      font-size: 1.5rem;
-    }
-  
-    h5 {
-      font-size: 1rem;
-    }
+   
   }
   
   @media (max-width: 576px) {
@@ -51,13 +45,9 @@
       height: 50px;
     }
   
-    h1 {
-      font-size: 1.2rem;
-    }
   
-    h5 {
-      font-size: 0.9rem;
-    }
+  
+   
   }
   .x-fs-5{
     color: black !important;
