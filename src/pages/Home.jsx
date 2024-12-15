@@ -20,7 +20,7 @@ function Home() {
     <WhyStudent></WhyStudent>
     <Videos></Videos>
     <PlacementPage></PlacementPage>
-    <Headlines></Headlines>
+    {/* <Headlines></Headlines> */}
 </>
 
 
