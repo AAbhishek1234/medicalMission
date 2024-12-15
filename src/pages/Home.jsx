@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar'
 import JobReady from '../components/JobReady'
 import Partners from '../components/Partners'
 import WhyStudent from '../components/WhyStudent'
+import Videos from '../components/Videos'
 
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
     <JobReady></JobReady>
     <Partners></Partners>
     <WhyStudent></WhyStudent>
+    <Videos></Videos>
 </>
 
 
