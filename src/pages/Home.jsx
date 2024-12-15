@@ -8,6 +8,7 @@ import WhyStudent from '../components/WhyStudent'
 import Videos from '../components/Videos'
 import PlacementPage from '../components/PlacementPage'
 import Headlines from '../components/headlines'
+import Footer from '../components/Footer'
 
 function Home() {
   return (
@@ -21,6 +22,7 @@ function Home() {
     <Videos></Videos>
     <PlacementPage></PlacementPage>
     <Headlines></Headlines>
+    <Footer></Footer>
 </>
 
 

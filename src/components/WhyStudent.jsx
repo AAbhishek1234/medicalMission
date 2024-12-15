@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Carousel, Button } from "react-bootstrap";
+import { Container, Row, Col, Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./whystudent.css"; // Add custom styles here
 
