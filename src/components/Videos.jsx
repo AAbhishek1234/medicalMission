@@ -1,11 +1,11 @@
 import React from "react";
-import { Container, Row, Col, Card, Carousel } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./videos.css"; // Custom CSS file
 
 const VideoCard = ({ videoSrc, name, title }) => {
   return (
-    <Card className="h-100 shadow-sm"  >
+    <Card className="h-100 shadow-sm video-card">
       <Card.Body className="text-center">
         {/* Video */}
         <div className="ratio ratio-16x9 mb-3">
@@ -47,29 +47,18 @@ const VideoCardsSection = () => {
   ];
 
   return (
-    <Container className="py-5" style={{marginTop:"-3rem"}}>
+    <Container className="py-5" style={{ marginTop: "-3rem" }}>
       {/* Section Heading */}
-      <Row className="mb-4 text-center">
-        <Col>
-         
-        </Col>
-      </Row>
-
-      {/* Mobile View (Carousel) */}
-      <div className="d-lg-none card-slider">
-        <Carousel
-          indicators={false}
-          controls={false}
-          className="custom-carousel"
-        >
-          {cardData.map((card, index) => (
-            <Carousel.Item key={index}>
-              <div className="card-wrapper">
-                <VideoCard {...card} />
-              </div>
-            </Carousel.Item>
-          ))}
-        </Carousel>
+      
+      {/* Mobile View (1 Card at a Time) */}
+      <div className="d-lg-none">
+        {cardData.map((card, index) => (
+          <Row key={index} className="g-4 mb-3 justify-content-center">
+            <Col xs={12} md={8}>
+              <VideoCard {...card} />
+            </Col>
+          </Row>
+        ))}
       </div>
 
       {/* Desktop View (3 Cards) */}

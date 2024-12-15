@@ -1,25 +1,14 @@
-.custom-carousel .carousel-inner {
-    display: flex;
+/* Video Card Styles */
+.video-card {
+    border-radius: 10px;
+    overflow: hidden;
   }
   
-  .custom-carousel .carousel-item {
-    display: flex;
-    justify-content: center;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .card-wrapper {
-    width: 80%; /* Slightly smaller width to allow next card to peek */
-    transform: scale(0.9); /* Scale down inactive cards */
-    transition: transform 0.5s ease;
-  }
-  
-  .carousel-item.active .card-wrapper {
-    transform: scale(1); /* Highlight active card */
-  }
-  
-  .carousel-item-next,
-  .carousel-item-prev {
-    transform: translateX(10%); /* Peeks the next card */
+  /* Mobile-Specific Styling */
+  @media (max-width: 992px) {
+    .video-card {
+      margin: 0 auto;
+      width: 90%;
+    }
   }
   
