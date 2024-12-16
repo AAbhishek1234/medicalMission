@@ -29,21 +29,19 @@
 
 
 
-
-
 /* Hero Section */
 .hero-section {
   padding: 2rem 0;
 }
 
-/* Ensure consistent height */
+/* Row: Dynamically Adjust Height */
 .hero-section .row {
-  min-height: 100vh; /* Full viewport height */
+  min-height: 78vh !important; /* Default height for larger screens */
 }
 
 /* Mobile Carousel */
 .mobile-carousel {
-  height: 300px; /* Fixed height */
+  height: 280px; /* Mobile fixed height */
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -58,7 +56,7 @@
 
 /* Desktop Carousel */
 .desktop-carousel {
-  height: 415px; /* Fixed height for consistency */
+  height: 450px; /* Default height for large screens */
   width: 100%;
   position: relative;
 }
@@ -78,12 +76,33 @@
   opacity: 1;
 }
 
-/* Ensure Text Content Stretches Correctly */
-.d-flex.justify-content-center {
-  height: 100%;
+/* Responsive Fixes for All Devices */
+@media (max-width: 1200px) {
+  .hero-section .row {
+    min-height: 70vh; /* Reduce height for tablets */
+  }
+
+  .desktop-carousel {
+    height: 350px; /* Smaller height on tablets */
+  }
 }
 
-/* Optional: Background Image Placeholder */
-.nur-text-primary {
-  color: chocolate !important;
+@media (max-width: 768px) {
+  .hero-section .row {
+    min-height: 60vh; /* Adjust height for mobile devices */
+  }
+
+  .mobile-carousel {
+    height: 250px; /* Slightly smaller height on mobile */
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section .row {
+    min-height: 50vh; /* Minimum height for smaller screens */
+  }
+
+  .mobile-carousel {
+    height: 220px; /* Smaller carousel height for very small devices */
+  }
 }
