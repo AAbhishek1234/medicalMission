@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
  import Banner from '../components/Banner'
  import OurSuccess from '../components/OurSuccess'
 import JobReady from '../components/JobReady'
+import SE from '../components/SE'
 import Partners from '../components/Partners'
 import WhyStudent from '../components/WhyStudent'
 import Videos from '../components/Videos'
@@ -18,6 +19,7 @@ function Home() {
     <Banner></Banner>
     <OurSuccess></OurSuccess>
     <JobReady></JobReady>
+    <SE></SE>
     <Partners></Partners>
     {/* <VectorAnimation></VectorAnimation> */}
     <WhyStudent></WhyStudent>
