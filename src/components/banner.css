@@ -31,49 +31,59 @@
 
 
 
+/* Hero Section */
+.hero-section {
+  padding: 2rem 0;
+}
 
-  .hero-section {
-    padding: 2rem 0;
-  }
-  
-  /* Mobile Carousel */
-  .mobile-carousel {
-    height: 300px; /* Fixed height for mobile */
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .mobile-carousel img {
-    height: 100%;
-    object-fit: cover; /* Ensures the image fits within the container */
-  }
-  
-  /* Desktop Carousel */
-  .desktop-carousel {
-    height: 415px; /* Fixed height for desktop */
-    width: 100%;
-    position: relative;
-  }
-  
-  .carousel-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-  
-  .carousel-image.active {
-    opacity: 1; /* Show the active image */
-  }
-  
-  /* Text Color */
-  .nur-text-primary {
-    color: chocolate !important;
-  }
-  
+/* Ensure consistent height */
+.hero-section .row {
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Mobile Carousel */
+.mobile-carousel {
+  height: 300px; /* Fixed height */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-carousel img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+}
+
+/* Desktop Carousel */
+.desktop-carousel {
+  height: 415px; /* Fixed height for consistency */
+  width: 100%;
+  position: relative;
+}
+
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-image.active {
+  opacity: 1;
+}
+
+/* Ensure Text Content Stretches Correctly */
+.d-flex.justify-content-center {
+  height: 100%;
+}
+
+/* Optional: Background Image Placeholder */
+.nur-text-primary {
+  color: chocolate !important;
+}
