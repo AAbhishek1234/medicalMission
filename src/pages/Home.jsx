@@ -9,6 +9,7 @@ import Videos from '../components/Videos'
 import PlacementPage from '../components/PlacementPage'
 import Headlines from '../components/headlines'
 import Footer from '../components/Footer'
+//import VectorAnimation from '../components/VectorAnimation'
 
 function Home() {
   return (
@@ -18,6 +19,7 @@ function Home() {
     <OurSuccess></OurSuccess>
     <JobReady></JobReady>
     <Partners></Partners>
+    {/* <VectorAnimation></VectorAnimation> */}
     <WhyStudent></WhyStudent>
     <Videos></Videos>
     <PlacementPage></PlacementPage>

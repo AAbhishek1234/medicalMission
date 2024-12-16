@@ -36,7 +36,7 @@
 
 /* Row: Dynamically Adjust Height */
 .hero-section .row {
-  min-height: 78vh !important; /* Default height for larger screens */
+  min-height: 80vh !important; /* Default height for larger screens */
 }
 
 /* Mobile Carousel */

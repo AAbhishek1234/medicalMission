@@ -65,7 +65,7 @@ const CustomNavbar = () => {
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav className="ms-auto">
-              <Nav.Link href="#" className="me-3 fw-bold text-dark">Home</Nav.Link>
+              <Nav.Link href="/" className="me-3 fw-bold text-dark">Home</Nav.Link>
               <Nav.Link href="#" className="me-3 fw-bold text-dark">Courses</Nav.Link>
               <Nav.Link href="#" className="me-3 fw-bold text-dark">Campuses</Nav.Link>
               <Nav.Link href="#" className="me-3 fw-bold text-dark">Blogs</Nav.Link>
