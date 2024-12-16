@@ -79,7 +79,6 @@
 
 
 
-
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import image1 from "./dr.png";
@@ -89,9 +88,7 @@ import "./banner.css";
 const HeroSection = () => {
   const images = [image1, image2];
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
 
-  // Automatic image slider
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -99,27 +96,16 @@ const HeroSection = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Dynamic resizing for mobile
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 767);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
     <Container fluid className="hero-section bg-light px-0">
       <Row className="align-items-center text-center text-md-start m-0">
-        {/* Mobile Image Section */}
+        {/* Mobile View */}
         <Col xs={12} className="d-md-none mb-3">
-          <div
-            className="carousel-wrapper"
-            style={{ minHeight: "250px" }}
-          >
+          <div className="carousel-wrapper mobile-carousel">
             <img
               src={images[currentIndex]}
               alt={`Slide ${currentIndex}`}
               className="img-fluid"
-              style={{ objectFit: "cover", height: "100%" }}
             />
           </div>
         </Col>
@@ -140,12 +126,12 @@ const HeroSection = () => {
           </div>
         </Col>
 
-        {/* Desktop Carousel */}
+        {/* Desktop View */}
         <Col
           md={6}
           className="d-none d-md-flex position-relative justify-content-center align-items-center"
         >
-          <div className="carousel-wrapper" style={{ minHeight: "415px" }}>
+          <div className="carousel-wrapper desktop-carousel">
             {images.map((image, index) => (
               <img
                 key={index}
