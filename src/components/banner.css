@@ -15,13 +15,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Ensures the image fits perfectly */
+    object-fit: contain;
     opacity: 0;
-    transition: opacity 1s ease-in-out; /* Smooth fade transition */
+    transition: opacity 1s ease-in-out; 
   }
   
   .carousel-image.active {
-    opacity: 1; /* Show the active image */
+    opacity: 1;
   }
   .nur-text-primary{
     color:chocolate !important;
