@@ -12,7 +12,7 @@ const CustomNavbar = () => {
 
   return (
     <>
-      {/* Navbar */}
+      
       <Navbar bg="white" expand="lg" fixed="top" className="shadow-sm py-3">
         <Container>
           <Navbar.Brand href="/">MedicalMission</Navbar.Brand>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button, Container } from 'react-bootstrap';
-
+import Navbar from '../components/Navbar'
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -51,6 +51,8 @@ const ContactForm = () => {
   };
   
   return (
+    <>
+    <Navbar/>
     <Container className="mt-5">
       <h2>Contact Form</h2>
       <Form onSubmit={handleSubmit}>
@@ -92,6 +94,8 @@ const ContactForm = () => {
         </Button>
       </Form>
     </Container>
+    </>
+
   );
 };
 
