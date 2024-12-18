@@ -75,10 +75,6 @@
 
 
 
-
-
-
-
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import image1 from "./dr.png";
@@ -89,12 +85,46 @@ const HeroSection = () => {
   const images = [image1, image2];
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const words = ["Nursing", "Doctor", "Hospital", "Healthcare"]; // Words to type
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [displayedText, setDisplayedText] = useState(""); // Typing text
+  const [letterIndex, setLetterIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
   useEffect(() => {
-    const interval = setInterval(() => {
+    // Image carousel logic
+    const imageInterval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 2000);
-    return () => clearInterval(interval);
+    return () => clearInterval(imageInterval);
   }, []);
+
+  useEffect(() => {
+    const typingEffect = setTimeout(() => {
+      const currentWord = words[currentWordIndex];
+  
+      if (!isDeleting) {
+        setDisplayedText((prev) => {
+          const newText = prev + currentWord[letterIndex];
+          if (letterIndex === currentWord.length - 1) {
+            setIsDeleting(true);
+          }
+          return newText;
+        });
+        setLetterIndex((prev) => prev + 1);
+      } else {
+        setDisplayedText((prev) => prev.slice(0, -1));
+        if (displayedText === "") {
+          setIsDeleting(false);
+          setLetterIndex(0);
+          setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
+        }
+      }
+    }, isDeleting ? 300 : 400);
+  
+    return () => clearTimeout(typingEffect);
+  }, [letterIndex, isDeleting, currentWordIndex, displayedText]);
+  
 
   return (
     <Container fluid className="hero-section bg-light px-0">
@@ -113,11 +143,12 @@ const HeroSection = () => {
         {/* Text Content */}
         <Col xs={12} md={6} className="p-4">
           <h1 className="display-4 fw-bold">Build a Progressive Career in</h1>
-          <h1 className="nur-text-primary" style={{ color: "black" }}>
-            Nursing
+          <h1 className="nur-text-primary" style={{ color: "" }}>
+            {displayedText}
+            <span className="cursor"></span>
           </h1>
           <div className="mt-4">
-            <a href="tel:+917000000003">
+            <a href="tel:+918750768101">
               <Button variant="danger" className="me-2">
                 Enquire Now
               </Button>

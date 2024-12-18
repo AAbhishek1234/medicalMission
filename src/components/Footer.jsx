@@ -16,9 +16,10 @@ const Footer = () => {
               healthier future.
             </p>
             <p>
-              <strong>Email:</strong> support@medicalmission.org <br />
-              <strong>Phone:</strong> +91 7000000003 <br />
-              <strong>Location:</strong> Faridabad
+              <strong style={{fontSize:"18px"}}>Email:</strong> support@medicalmission.org <br />
+              <strong style={{fontSize:"18px"}}>Phone:</strong> +91 8750768101 <br />
+              <strong style={{fontSize:"18px"}}>Location:</strong> Pillar No.687, Near DPS School,<br/>
+              Old Faridabad-121002
             </p>
           </Col>
 
@@ -42,7 +43,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/contact" className="text-white text-decoration-none">
+                <a href="/apply" className="text-white text-decoration-none">
                   Contact Us
                 </a>
               </li>

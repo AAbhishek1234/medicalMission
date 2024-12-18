@@ -106,3 +106,19 @@
     height: 220px; /* Smaller carousel height for very small devices */
   }
 }
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  background-color: black;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
