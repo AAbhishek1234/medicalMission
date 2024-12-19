@@ -120,7 +120,7 @@ const HeroSection = () => {
           setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
         }
       }
-    }, isDeleting ? 300 : 400);
+    }, isDeleting ? 350 : 100);
   
     return () => clearTimeout(typingEffect);
   }, [letterIndex, isDeleting, currentWordIndex, displayedText]);
