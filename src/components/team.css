@@ -1,0 +1,63 @@
+/* General Card Styling */
+.team-card {
+    border: none; /* Remove default border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .team-card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+  }
+  
+  /* Image Styling */
+  .team-card img {
+    height: 300px !important;
+    object-fit: fill; /* Ensures images fit the card */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  /* Card Title Styling */
+  .team-card .card-title {
+    font-size: 1.2rem !important;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 576px) {
+    /* Adjust card image height for smaller screens */
+    .team-card img {
+      height: 350px !important; /* Reduce image height */
+      object-fit: cover; /* Maintain aspect ratio */
+    }
+  .m-text-center{
+    font-size: 2rem !important;
+    font-weight: bold !important;
+    text-align: center !important;
+  }
+    /* Adjust card title size */
+    .team-card .card-title {
+      font-size: 1rem; /* Reduce title size for smaller screens */
+    }
+  
+    /* Add padding for smaller screens */
+    .team-card {
+      margin: 0 10px; /* Add horizontal margin */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* Adjust card image height for medium-small screens */
+    .team-card img {
+      height: 350px !important; /* Slightly reduce image height */
+    }
+  
+    /* Adjust card title size */
+    .team-card .card-title {
+      font-size: 1.2rem !important; /* Slightly smaller title size */
+    }
+  }
+  

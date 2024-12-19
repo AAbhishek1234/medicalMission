@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import './team.css'
 const OurTeam = () => {
   const teamData = [
     {
@@ -10,30 +10,31 @@ const OurTeam = () => {
       text: " ",
     },
     {
-      image: "/Images/faculty1.jpg",
-      title: "Faculty of Radiology & Imaging Technolog",
-      text: "Pre-schools Across the Country",
-    },
-    {
-      image: "/Images/faculty2.jpg",
-      title: "Faculty of Medical Lab Technology",
-      text: "Recognized for Excellence in Education",
-    },
-    {
-      image: "/Images/faculty3.jpg",
-      title: "Admistration Head",
-      text: "A Thriving Community of Learners",
-    },
-    {
-      image: "/Images/ranjeete.jpg",
-      title: "Marketing Head",
-      text: "Leading Through Expertise",
-    },
+        image: "/Images/faculty3.jpg",
+        title: "Admistration Head",
+        text: "A Thriving Community of Learners",
+      },
+      {
+        image: "/Images/ranjeete.jpg",
+        title: "Marketing Head fff feqwefqew",
+        text: "Leading Through Expertise",
+      },
+    
+        {
+            image: "/Images/faculty1.jpg",
+            title: "Faculty of Radiology & Imaging Technolog",
+            text: "Pre-schools Across the Country",
+          },
+          {
+            image: "/Images/faculty2.jpg",
+            title: "Faculty of Medical Lab Technology",
+            text: "Recognized for Excellence in Education",
+          },
   ];
 
   return (
     <Container className="py-4">
-      <h1 className="text-center mb-4" style={{fontWeight:"bold"}}>Meet Our Team</h1>
+      <h1 className="m-text-center mb-4" style={{fontWeight:"bold",textAlign:"center"}}>Meet Our Team</h1>
       <Row className="g-4">
         {teamData.map((item, index) => (
           <Col

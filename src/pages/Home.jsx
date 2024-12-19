@@ -12,6 +12,7 @@ import PlacementPage from '../components/PlacementPage'
 import Headlines from '../components/headlines'
 import Footer from '../components/Footer'
 import Team from '../components/Team'
+import Gallery from '../components/Gallery'
 //import VectorAnimation from '../components/VectorAnimation'
 
 function Home() {
@@ -29,6 +30,7 @@ function Home() {
     <WhyStudent></WhyStudent>
     <Videos></Videos>
     <PlacementPage></PlacementPage>
+    <Gallery></Gallery>
     <Headlines></Headlines>
     <Footer></Footer>
 </>
