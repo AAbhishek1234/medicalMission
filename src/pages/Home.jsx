@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
  import Banner from '../components/Banner'
  import OurSuccess from '../components/OurSuccess'
 import JobReady from '../components/JobReady'
+// import AboutUs from '../components/AboutUs'
 import SE from '../components/SE'
 import Partners from '../components/Partners'
 import WhyStudent from '../components/WhyStudent'
@@ -10,6 +11,7 @@ import Videos from '../components/Videos'
 import PlacementPage from '../components/PlacementPage'
 import Headlines from '../components/headlines'
 import Footer from '../components/Footer'
+import Team from '../components/Team'
 //import VectorAnimation from '../components/VectorAnimation'
 
 function Home() {
@@ -19,6 +21,8 @@ function Home() {
     <Banner></Banner>
     <OurSuccess></OurSuccess>
     <JobReady></JobReady>
+    <Team></Team>
+    {/* <AboutUs></AboutUs> */}
     <SE></SE>
     <Partners></Partners>
     {/* <VectorAnimation></VectorAnimation> */}

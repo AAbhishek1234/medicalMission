@@ -4,15 +4,15 @@ import "./parterns.css"; // Custom CSS for styling and animation
 
 const logos = [
   { id: 1, src: "/Images/lu.png", alt: "Logo 1" },
-  { id: 2, src: "/Images/tagorelogo.jpg", alt: "Logo 2" },
-  { id: 3, src: "/Images/jyotilogo.png", alt: "Logo 3" },
-  { id: 4, src: "/Images/tagorelogo.jpg", alt: "Logo 4" },
-  { id: 5, src: "/Images/jyotilogo.png", alt: "Logo 5" },
+  { id: 2, src: "/Images/osguu.jpg", alt: "Logo 2" },
+  { id: 3, src: "/Images/swamiviveka.jpg", alt: "Logo 3" },
+  { id: 4, src: "/Images/nilm.png", alt: "Logo 4" },
+  { id: 5, src: "/Images/manglayatan.jpg", alt: "Logo 5" },
   { id: 6, src: "/Images/lu.png", alt: "Logo 6" },
-  { id: 7, src: "/Images/jyotilogo.png", alt: "Logo 7" },
-  { id: 8, src: "/Images/lu.png", alt: "Logo 8" },
-  { id: 9, src: "/Images/jyotilogo.png", alt: "Logo 9" },
-  { id: 10, src: "/Images/tagorelogo.jpg", alt: "Logo 10" },
+  { id: 7, src: "/Images/osguu.jpg", alt: "Logo 7" },
+  { id: 8, src: "/Images/swamiviveka.jpg",alt: "Logo 8" },
+  { id: 9, src: "/Images/nilm.png", alt: "Logo 9" },
+  { id: 10, src: "/Images/manglayatan.jpg", alt: "Logo 10" },
 ];
 
 const Partners = () => {

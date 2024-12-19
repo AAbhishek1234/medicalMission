@@ -86,3 +86,13 @@ body {
   width: 70px !important;
   margin-left: 10px !important;
 }
+
+/* navbars.css */
+
+.logo-text {
+  font-size: 1.2rem !important; /* Adjust font size */
+  font-weight: bold !important; /* Make text bold */
+  color:#dc3545 !important; /* Set the text color */
+  text-transform: uppercase; /* Optional: Convert text to uppercase */
+  letter-spacing: 1px; /* Optional: Add spacing between letters */
+}

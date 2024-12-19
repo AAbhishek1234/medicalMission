@@ -77,15 +77,15 @@
 
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import image1 from "./dr.png";
-import image2 from "./nurse.png";
+import image1 from "./b1-removebg-preview.png";
+import image2 from "./b2-removebg-preview.png";
 import "./banner.css";
 
 const HeroSection = () => {
   const images = [image1, image2];
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const words = ["Nursing", "Doctor", "Hospital", "Healthcare"]; // Words to type
+  const words = ["Nursing",  "HospitalManagement", "Healthcare"]; // Words to type
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState(""); // Typing text
   const [letterIndex, setLetterIndex] = useState(0);
