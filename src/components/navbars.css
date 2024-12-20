@@ -142,5 +142,15 @@ body {
   }
   .navbar-logo-text{
     font-size: 1.2rem !important;
+    margin-left: -3px !important;
+  }
+}
+@media (max-width: 768px){
+  .navbar-logo{
+    height: 30px !important;
+    width: 40px !important;
+  }
+  .navbar-logo-text{
+    font-size: 1.2rem !important;
   }
 }
