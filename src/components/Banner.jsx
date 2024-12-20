@@ -148,7 +148,7 @@ const HeroSection = () => {
             <span className="cursor"></span>
           </h1>
           <div className="mt-4">
-            <a href="tel:+918750768101">
+            <a href="tel:+91 7310709933">
               <Button variant="danger" className="me-2">
                 Enquire Now
               </Button>

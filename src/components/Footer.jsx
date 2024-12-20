@@ -1,8 +1,14 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-scroll"; // Import Link from react-scroll
 import "./footer.css"; // Import custom CSS file
 
 const Footer = () => {
+  // Function to scroll to top
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <footer className="bg-dark text-white py-4">
       <Container>
@@ -16,9 +22,13 @@ const Footer = () => {
               healthier future.
             </p>
             <p>
-              <strong style={{fontSize:"18px"}}>Email:</strong> support@medicalmission.org <br />
-              <strong style={{fontSize:"18px"}}>Phone:</strong> +91 8750768101 <br />
-              <strong style={{fontSize:"18px"}}>Location:</strong> Pillar No.687, Near DPS School,<br/>
+              <strong style={{ fontSize: "18px" }}>Email:</strong>{" "}
+              support@medicalmission.org <br />
+              <strong style={{ fontSize: "18px" }}>Phone:</strong> +91 8750768101{" "}
+              <br />
+              <strong style={{ fontSize: "18px" }}>Location:</strong> Pillar
+              No.687, Near DPS School,
+              <br />
               Old Faridabad-121002
             </p>
           </Col>
@@ -28,24 +38,50 @@ const Footer = () => {
             <h5>Quick Links</h5>
             <ul className="list-unstyled">
               <li>
-                <a href="/" className="text-white text-decoration-none">
+                {/* Clicking on Home will scroll to the top of the page */}
+                <a
+                  href="#home" // The #home can be anything since we use scrollToTop function
+                  onClick={scrollToTop}
+                  className="text-white text-decoration-none"
+                >
                   Home
                 </a>
               </li>
               <li>
-                <a href="/about" className="text-white text-decoration-none">
+                <Link
+                  href="#team"
+                  to="team" // This ID should be an actual section ID
+                  smooth={true}
+                  duration={10}
+                  offset={-70}
+                  className="text-white text-decoration-none"
+                >
                   Team
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/courses" className="text-white text-decoration-none">
+                <Link
+                href="#courses"
+                  to="courses" // This ID should be an actual section ID
+                  smooth={true}
+                  duration={10}
+                  offset={-70}
+                  className="text-white text-decoration-none"
+                >
                   Courses
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/apply" className="text-white text-decoration-none">
-                  Contact Us
-                </a>
+                <Link
+                href="#gallery"
+                  to="gallery" // This ID should be an actual section ID
+                  smooth={true}
+                  duration={10}
+                  offset={-70}
+                  className="text-white text-decoration-none"
+                >
+                  Gallery
+                </Link>
               </li>
             </ul>
           </Col>
@@ -70,15 +106,11 @@ const Footer = () => {
           </Col>
         </Row>
 
-        {/* Google Map */}
-       
         {/* Copyright */}
         <Row className="cp-text-center mt-3">
           <Col>
             <p className="mb-0">
               © {new Date().getFullYear()} Medical Mission. All rights reserved.
-              <br />
-             
             </p>
           </Col>
         </Row>

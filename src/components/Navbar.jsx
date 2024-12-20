@@ -88,14 +88,14 @@ const CustomNavbar = () => {
             </Nav>
             <div className="d-flex flex-column flex-md-row align-items-left gap-2">
               <a
-                href="tel:+91 8750768101"
+                href="tel:+91 7310709933"
                 style={{
                   fontSize: "20px",
                   textDecoration: "none",
                   color: "black",
                 }}
               >
-                +91 8750768101
+                +91 7310709933
               </a>
               <Button variant="outline-danger" onClick={handleModalShow}>
                 Apply Now
