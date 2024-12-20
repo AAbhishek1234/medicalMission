@@ -95,6 +95,9 @@ transition: opacity 1s ease-in-out !important;
   .mobile-carousel {
     height: 250px; /* Slightly smaller height on mobile */
   }
+  .display-4{
+    font-size: 2rem !important;
+  }
 }
 
 @media (max-width: 576px) {
@@ -104,6 +107,9 @@ transition: opacity 1s ease-in-out !important;
 
   .mobile-carousel {
     height: 220px; /* Smaller carousel height for very small devices */
+  }
+  .display-4{
+    font-size: 2.2rem !important;
   }
 }
 
