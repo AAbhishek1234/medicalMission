@@ -35,9 +35,9 @@ const CustomNavbar = () => {
               alt="MedicalMission Logo"
               width="150"
               height="auto"
-              className="d-inline-block align-top me-2"
+              className="navbar-logo me-2" // Custom class for the logo image
             />
-            <span className="logo-text">Medical Mission</span>
+            <span className="navbar-logo-text">Medical Mission</span> {/* Custom class for the text */}
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
