@@ -1,7 +1,8 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import './team.css'
+import "./team.css";
+
 const OurTeam = () => {
   const teamData = [
     {
@@ -10,31 +11,36 @@ const OurTeam = () => {
       text: " ",
     },
     {
-        image: "/Images/faculty3.jpg",
-        title: "Admistration Head",
-        text: "A Thriving Community of Learners",
-      },
-      {
-        image: "/Images/ranjeete.jpg",
-        title: "Marketing Head fff feqwefqew",
-        text: "Leading Through Expertise",
-      },
-    
-        {
-            image: "/Images/faculty1.jpg",
-            title: "Faculty of Radiology & Imaging Technolog",
-            text: "Pre-schools Across the Country",
-          },
-          {
-            image: "/Images/faculty2.jpg",
-            title: "Faculty of Medical Lab Technology",
-            text: "Recognized for Excellence in Education",
-          },
+      image: "/Images/faculty3.jpg",
+      title: "Administration Head",
+      text: "A Thriving Community of Learners",
+    },
+    {
+      image: "/Images/ranjeete.jpg",
+      title: "Marketing Head hello sir",
+      text: "Leading Through Expertise",
+    },
+    {
+      image: "/Images/faculty1.jpg",
+      title: "Radiology & Imaging Technology",
+      text: "Pre-schools Across the Country",
+    },
+    {
+      image: "/Images/faculty2.jpg",
+      title: "Medical Lab Technology",
+      text: "Recognized for Excellence in Education",
+    },
   ];
 
   return (
-    <Container className="py-4">
-      <h1 className="m-text-center mb-4" style={{fontWeight:"bold",textAlign:"center"}}>Meet Our Team</h1>
+    <Container
+      id="team"
+      className="py-4"
+      style={{ paddingTop: "80px", marginTop: "-50px" }} // Adjustments for fixed navbar
+    >
+      <h1 className="text-center mb-4" style={{ fontWeight: "bold",color:"black" }}>
+        Meet Our Team
+      </h1>
       <Row className="g-4">
         {teamData.map((item, index) => (
           <Col
@@ -58,12 +64,12 @@ const OurTeam = () => {
                 }}
               />
               <Card.Body className="d-flex flex-column text-center">
-                <Card.Title className="mb-2" style={{ fontSize: "1.2rem", fontWeight: "bold" }}>
+                <Card.Title
+                  className="mb-2"
+                  style={{ fontSize: "1.2rem", fontWeight: "bold" }}
+                >
                   {item.title}
                 </Card.Title>
-                {/* <Card.Text style={{ fontSize: "0.9rem", color: "#555" }}>
-                  {item.text}
-                </Card.Text> */}
               </Card.Body>
             </Card>
           </Col>

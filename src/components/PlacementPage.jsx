@@ -83,7 +83,7 @@ const ScrollLoadingPlacement = () => {
         </Row>
       )}
       <p className="pp-text-light fs-5">
-      Over 1100 healthcare organisations are joining hands with us to provide successful careers to our students after completing one of the many paramedical courses from MedicalMission.
+      Over 1100 healthcare organisations are joining hands with us to provide successful careers to our students after completing one of the many paramedical courses from Medical Mission.
         </p>
     </Container>
   );

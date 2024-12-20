@@ -34,7 +34,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="/about" className="text-white text-decoration-none">
-                  About Us
+                  Team
                 </a>
               </li>
               <li>

@@ -15,7 +15,7 @@ const CustomComponent = () => {
     <Container fluid className="p-5">
       <Row className="mb-5 align-items-center">
         <Col md={6}>
-          <h1 className="fw-bold">MM Making Headline</h1>
+          <h1 className="fw-bold" style={{color:"black"}}>Medical Mission Blogs</h1>
         </Col>
       </Row>
       <p className="hd-text-light fs-5">

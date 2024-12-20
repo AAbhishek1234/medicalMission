@@ -33,7 +33,7 @@ const SuccessSection = () => {
             Our Success So Far
           </h1>
           <p className="mm-text-muted" style={{ color: "black" }}>
-            Medicalmission operates at the intersection of education and
+            Medical Mission operates at the intersection of education and
             healthcare, offering various paramedical courses in India. Our
             approach and efforts have made a huge impact in the healthcare
             industry. Our commitment to creating a difference remains strong and

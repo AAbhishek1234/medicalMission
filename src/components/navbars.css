@@ -2,6 +2,8 @@
 .navbar-nav .nav-link {
   font-weight: normal !important;
   font-size: 20px !important;
+  color: black !important;
+  text-decoration: none !important;
 }
 
 /* Adjust the body padding for navbar */
@@ -95,4 +97,17 @@ body {
   color:#dc3545 !important; /* Set the text color */
   text-transform: uppercase; /* Optional: Convert text to uppercase */
   letter-spacing: 1px; /* Optional: Add spacing between letters */
+}
+
+/* Custom Modal Styling */
+.custom-modal .modal-dialog {
+  max-width: 400px; /* Set modal's max-width */
+  margin: auto;
+  width: 90%; /* Responsive for smaller screens */
+  border: none !important;
+}
+
+/* Centered Title */
+.text-center {
+  text-align: center;
 }

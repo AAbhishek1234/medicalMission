@@ -8,28 +8,28 @@ const testimonials = [
   {
     id: 1,
     name: "Rajneesh",
-    text: "I learned a lot through fun activities and different teaching methods at Virohan. ",
+    text: "I learned a lot through fun activities and different teaching methods at MedicalMission. ",
     company: "Placed with Orthotech India Pvt.Ltd",
     image: "/Images/carry.jpeg",
   },
   {
     id: 2,
     name: "Sneha",
-    text: "I learned a lot through fun activities and different teaching methods at Virohan.",
+    text: "I learned a lot through fun activities and different teaching methods at MedicalMission.",
     company: "Placed with HealthCare India Pvt.Ltd",
     image: "/Images/sg.jpg",
   },
   {
     id: 3,
     name: "Rahul",
-    text: "I learned a lot through fun activities and different teaching methods at Virohan.",
+    text: "I learned a lot through fun activities and different teaching methods at MedicalMission.",
     company: "Placed with MediTech Ltd.",
     image: "/Images/casual1.jpg",
   },
   {
     id: 4,
     name: "Upmanyu",
-    text: "I learned a lot through fun activities and different teaching methods at Virohan.",
+    text: "I learned a lot through fun activities and different teaching methods at MedicalMission.",
     company: "Placed with Standup India",
     image: "/Images/formal9.png",
   },
@@ -41,7 +41,7 @@ const StudentSlider = () => {
       {/* Heading */}
       <Row className="justify-content-center mb-4">
         <Col md={8}>
-          <h1 className="fw-bold">Why Student Loves MM</h1>
+          <h1 className="fw-bold" style={{color:"black"}}>Why Students Love Medical Mission</h1>
           <p className="st-text-muted" style={{color:"black"}}>
             Medicalmission operates at the intersection of education and
             healthcare, offering various paramedical courses in India.
