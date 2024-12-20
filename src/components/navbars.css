@@ -152,5 +152,6 @@ body {
   }
   .navbar-logo-text{
     font-size: 1.2rem !important;
+    margin-left: -3px !important;
   }
 }

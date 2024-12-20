@@ -49,7 +49,7 @@
       font-size: 2rem !important;
     }
     .gallery-image-wrapper {
-      height: 350px !important; /* Reduce height for smaller devices */
+      height: 300px !important; /* Reduce height for smaller devices */
     }
   }
   
