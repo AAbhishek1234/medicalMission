@@ -12,7 +12,7 @@ const CustomComponent = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
   return (
-    <Container fluid className="p-5">
+    <Container fluid className="hde-p-5">
       <Row className="mb-5 align-items-center">
         <Col md={6}>
           <h1 className="fw-bold" style={{color:"black"}}>Medical Mission Blogs</h1>
