@@ -7,21 +7,71 @@ import logo from "../components/mmlogo.png"; // Import your logo image
 
 const CustomNavbar = () => {
   const [showModal, setShowModal] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+  });
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false); // Track form submission state
 
   const handleModalShow = () => setShowModal(true);
   const handleModalClose = () => setShowModal(false);
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    alert("Form submitted successfully!");
-    handleModalClose(); // Close the modal after form submission
+  // Update form data state on input change
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
-  const handleScrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth", // Smooth scroll to the top
-    });
+  // Function to send data to Google Sheets
+  const sendToGoogleSheets = async (data) => {
+    try {
+      console.log("Data to be sent:", data);
+
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbwE9_RvGBmjYYh4p8ROAnlxk3aeauduhPOY9dpvsLA34t7zISrzq4nky777dKhhQce05Q/exec",
+        {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: {
+            "Content-Type": "application/json",
+          },
+          mode: "no-cors",
+        }
+      );
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Error submitting form.");
+    }
+  };
+
+  // Handle form submission
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    // Ensure required fields are filled
+    if (!formData.name || !formData.phone || !formData.email) {
+      alert("Please fill in all the fields.");
+      return;
+    }
+
+    // Send form data to Google Sheets
+    sendToGoogleSheets(formData);
+
+    // Set form submission success state to true
+    setIsFormSubmitted(true);
+
+    // Clear the form data
+    setFormData({ name: "", phone: "", email: "" });
+
+    // Close the modal after 1 second
+    setTimeout(() => {
+      setIsFormSubmitted(false);
+      handleModalClose();
+    }, 1000);
   };
 
   return (
@@ -37,13 +87,13 @@ const CustomNavbar = () => {
               height="auto"
               className="navbar-logo me-2" // Custom class for the logo image
             />
-            <span className="navbar-logo-text">Medical Mission</span> {/* Custom class for the text */}
+            <span className="navbar-logo-text">Medical Mission</span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav className="ms-auto">
               <Nav.Link
-                onClick={handleScrollToTop} // Scroll to top on click
+                //onClick={handleScrollToTop}
                 className="me-3"
                 style={{ textDecoration: "none", color: "black", fontWeight: "normal" }}
               >
@@ -54,7 +104,7 @@ const CustomNavbar = () => {
                   to="courses"
                   smooth={true}
                   duration={10}
-                  offset={-60} // Offset for fixed navbar height
+                  offset={-60}
                   className="me-3"
                   style={{ textDecoration: "none", color: "black", fontWeight: "normal" }}
                 >
@@ -120,72 +170,88 @@ const CustomNavbar = () => {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body className="p-4">
-          <Form onSubmit={handleFormSubmit}>
-            {/* Name Field */}
-            <Form.Group className="mb-4" controlId="formName">
-              <div className="input-group">
-                <span className="input-group-text bg-light border-0">
-                  <FaUser style={{ color: "#DC3545" }} />
-                </span>
-                <Form.Control
-                  type="text"
-                  placeholder="Enter your name"
-                  className="form-control shadow-sm"
-                  style={{ borderRadius: "30px" }}
-                  required
-                />
-              </div>
-            </Form.Group>
+          {isFormSubmitted ? (
+            <div className="text-center">
+              <h5 className="text-success">Thank you for your submission!</h5>
+              <p>Your details have been received, and we will contact you soon.</p>
+            </div>
+          ) : (
+            <Form onSubmit={handleFormSubmit}>
+              {/* Name Field */}
+              <Form.Group className="mb-4" controlId="formName">
+                <div className="input-group">
+                  <span className="input-group-text bg-light border-0">
+                    <FaUser style={{ color: "#DC3545" }} />
+                  </span>
+                  <Form.Control
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    placeholder="Enter your name"
+                    className="form-control shadow-sm"
+                    style={{ borderRadius: "30px" }}
+                    required
+                  />
+                </div>
+              </Form.Group>
 
-            {/* Phone Number Field */}
-            <Form.Group className="mb-4" controlId="formPhone">
-              <div className="input-group">
-                <span className="input-group-text bg-light border-0">
-                  <FaPhoneAlt style={{ color: "#DC3545" }} />
-                </span>
-                <Form.Control
-                  type="text"
-                  placeholder="Enter your phone number"
-                  className="form-control shadow-sm"
-                  style={{ borderRadius: "30px" }}
-                  required
-                />
-              </div>
-            </Form.Group>
+              {/* Phone Number Field */}
+              <Form.Group className="mb-4" controlId="formPhone">
+                <div className="input-group">
+                  <span className="input-group-text bg-light border-0">
+                    <FaPhoneAlt style={{ color: "#DC3545" }} />
+                  </span>
+                  <Form.Control
+                    type="text"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    placeholder="Enter your phone number"
+                    className="form-control shadow-sm"
+                    style={{ borderRadius: "30px" }}
+                    required
+                  />
+                </div>
+              </Form.Group>
 
-            {/* Email Field */}
-            <Form.Group className="mb-4" controlId="formEmail">
-              <div className="input-group">
-                <span className="input-group-text bg-light border-0">
-                  <FaEnvelope style={{ color: "#DC3545" }} />
-                </span>
-                <Form.Control
-                  type="email"
-                  placeholder="Enter your email"
-                  className="form-control shadow-sm"
-                  style={{ borderRadius: "30px" }}
-                  required
-                />
-              </div>
-            </Form.Group>
+              {/* Email Field */}
+              <Form.Group className="mb-4" controlId="formEmail">
+                <div className="input-group">
+                  <span className="input-group-text bg-light border-0">
+                    <FaEnvelope style={{ color: "#DC3545" }} />
+                  </span>
+                  <Form.Control
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    placeholder="Enter your email"
+                    className="form-control shadow-sm"
+                    style={{ borderRadius: "30px" }}
+                    required
+                  />
+                </div>
+              </Form.Group>
 
-            {/* Submit Button */}
-            <Button
-              variant="primary"
-              type="submit"
-              className="w-100 py-2"
-              style={{
-                backgroundColor: "#DC3545",
-                border: "none",
-                borderRadius: "30px",
-                fontWeight: "bold",
-                fontSize: "18px",
-                boxShadow: "0px 4px 10px rgba(220, 53, 69, 0.4)",
-              }}
-            >
-              Submit
-            </Button>
-          </Form>
+              {/* Submit Button */}
+              <Button
+                variant="primary"
+                type="submit"
+                className="w-100 py-2"
+                style={{
+                  backgroundColor: "#DC3545",
+                  border: "none",
+                  borderRadius: "30px",
+                  fontWeight: "bold",
+                  fontSize: "18px",
+                  boxShadow: "0px 4px 10px rgba(220, 53, 69, 0.4)",
+                }}
+              >
+                Submit
+              </Button>
+            </Form>
+          )}
         </Modal.Body>
       </Modal>
     </>

@@ -23,7 +23,7 @@ const Footer = () => {
             </p>
             <p>
               <strong style={{ fontSize: "18px" }}>Email:</strong>{" "}
-              support@medicalmission.org <br />
+              Medicalmission101@gmail.com <br />
               <strong style={{ fontSize: "18px" }}>Phone:</strong> +91 8750768101{" "}
               <br />
               <strong style={{ fontSize: "18px" }}>Location:</strong> Pillar

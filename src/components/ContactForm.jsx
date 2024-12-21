@@ -1,188 +1,119 @@
 import React, { useState } from "react";
-import { Navbar, Nav, Container, Button, Modal, Form } from "react-bootstrap";
-import { Link } from "react-scroll";
-import { FaUser, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
-import "./navbars.css";
-import logo from "../components/mmlogo.png"; // Import your logo image
+import { Form, Button, Container, Modal } from "react-bootstrap";
+import Navbar from "../components/Navbar";
+import "./contact.css";
 
-const CustomNavbar = () => {
-  const [showModal, setShowModal] = useState(false);
+const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+  });
 
-  const handleModalShow = () => setShowModal(true);
-  const handleModalClose = () => setShowModal(false);
+  const [show, setShow] = useState(false); // State for modal visibility
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    alert("Form submitted successfully!");
-    handleModalClose(); // Close the modal after form submission
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
   };
 
-  const handleScrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth", // Smooth scroll to the top
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form data on submit:", formData);
+    sendToGoogleSheets(formData);
+
+    // Show success alert first, then reset form
+    alert("Form submitted successfully!");
+    setFormData({
+      name: "",
+      phone: "",
+      email: "",
     });
+
+    setShow(false); // Close the modal after form submission
+  };
+
+  const sendToGoogleSheets = async (data) => {
+    try {
+      console.log("Data to be sent:", data);
+
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbwE9_RvGBmjYYh4p8ROAnlxk3aeauduhPOY9dpvsLA34t7zISrzq4nky777dKhhQce05Q/exec",
+        {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: {
+            "Content-Type": "application/json",
+          },
+          mode: "no-cors",
+        }
+      );
+
+      console.log("Request sent, no response body available.");
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Error submitting form");
+    }
   };
 
   return (
     <>
-      {/* Navbar */}
-      <Navbar bg="white" expand="lg" fixed="top" className="shadow-sm py-3">
-        <Container>
-          <Navbar.Brand href="/" className="d-flex align-items-center">
-            <img
-              src={logo}
-              alt="MedicalMission Logo"
-              width="150"
-              height="auto"
-              className="d-inline-block align-top me-2"
-            />
-            <span className="logo-text">MedicalMission</span>
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse id="navbarScroll">
-            <Nav className="ms-auto">
-              <Nav.Link
-                onClick={handleScrollToTop} // Scroll to top on click
-                className="me-3"
-                style={{ textDecoration: "none", color: "black", fontWeight: "normal" }}
-              >
-                Home
-              </Nav.Link>
-              <Nav.Link>
-                <Link
-                  to="courses"
-                  smooth={true}
-                  duration={10}
-                  offset={-60} // Offset for fixed navbar height
-                  className="me-3"
-                  style={{ textDecoration: "none", color: "black", fontWeight: "normal" }}
-                >
-                  Courses
-                </Link>
-              </Nav.Link>
-              <Nav.Link>
-                <Link
-                  to="team"
-                  smooth={true}
-                  duration={10}
-                  offset={-60}
-                  className="me-3"
-                  style={{ textDecoration: "none", color: "black", fontWeight: "normal" }}
-                >
-                  Team
-                </Link>
-              </Nav.Link>
-              <Nav.Link>
-                <Link
-                  to="gallery"
-                  smooth={true}
-                  duration={10}
-                  offset={-60}
-                  className="me-3"
-                  style={{ textDecoration: "none", color: "black", fontWeight: "normal" }}
-                >
-                  Gallery
-                </Link>
-              </Nav.Link>
-            </Nav>
-            <div className="d-flex flex-column flex-md-row align-items-left gap-2">
-              <a
-                href="tel:+91 8750768101"
-                style={{
-                  fontSize: "20px",
-                  textDecoration: "none",
-                  color: "black",
-                }}
-              >
-                +91 8750768101
-              </a>
-              <Button variant="outline-danger" onClick={handleModalShow}>
-                Apply Now
-              </Button>
-            </div>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+      <Navbar />
+      <Container className="mt-5 text-center">
+        <h1>Welcome to Contact Page</h1>
+        <Button
+          variant="primary"
+          className="mt-3"
+          onClick={() => setShow(true)} // Open the modal on button click
+        >
+          Open Contact Form
+        </Button>
+      </Container>
 
-      {/* Modal for Form */}
-      <Modal
-        show={showModal}
-        onHide={handleModalClose}
-        centered
-        dialogClassName="custom-modal"
-      >
+      {/* Modal for Contact Form */}
+      <Modal show={show} onHide={() => setShow(false)} centered>
         <Modal.Header closeButton>
-          <Modal.Title className="text-center w-100">
-            <span style={{ fontSize: "24px", fontWeight: "bold", color: "#DC3545" }}>
-              Join Us Today!
-            </span>
-          </Modal.Title>
+          <Modal.Title>Contact Form</Modal.Title>
         </Modal.Header>
-        <Modal.Body className="p-4">
-          <Form onSubmit={handleFormSubmit}>
-            {/* Name Field */}
-            <Form.Group className="mb-4" controlId="formName">
-              <div className="input-group">
-                <span className="input-group-text bg-light border-0">
-                  <FaUser style={{ color: "#DC3545" }} />
-                </span>
-                <Form.Control
-                  type="text"
-                  placeholder="Enter your name"
-                  className="form-control shadow-sm"
-                  style={{ borderRadius: "30px" }}
-                  required
-                />
-              </div>
+        <Modal.Body>
+          <Form onSubmit={handleSubmit}>
+            <Form.Group className="mb-3" controlId="formName">
+              <Form.Label>Name</Form.Label>
+              <Form.Control
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                value={formData.name}
+                onChange={handleChange}
+              />
             </Form.Group>
 
-            {/* Phone Number Field */}
-            <Form.Group className="mb-4" controlId="formPhone">
-              <div className="input-group">
-                <span className="input-group-text bg-light border-0">
-                  <FaPhoneAlt style={{ color: "#DC3545" }} />
-                </span>
-                <Form.Control
-                  type="text"
-                  placeholder="Enter your phone number"
-                  className="form-control shadow-sm"
-                  style={{ borderRadius: "30px" }}
-                  required
-                />
-              </div>
+            <Form.Group className="mb-3" controlId="formPhone">
+              <Form.Label>Phone Number</Form.Label>
+              <Form.Control
+                type="text"
+                name="phone"
+                placeholder="Enter your phone number"
+                value={formData.phone}
+                onChange={handleChange}
+              />
             </Form.Group>
 
-            {/* Email Field */}
-            <Form.Group className="mb-4" controlId="formEmail">
-              <div className="input-group">
-                <span className="input-group-text bg-light border-0">
-                  <FaEnvelope style={{ color: "#DC3545" }} />
-                </span>
-                <Form.Control
-                  type="email"
-                  placeholder="Enter your email"
-                  className="form-control shadow-sm"
-                  style={{ borderRadius: "30px" }}
-                  required
-                />
-              </div>
+            <Form.Group className="mb-3" controlId="formEmail">
+              <Form.Label>Email</Form.Label>
+              <Form.Control
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                value={formData.email}
+                onChange={handleChange}
+              />
             </Form.Group>
 
-            {/* Submit Button */}
-            <Button
-              variant="primary"
-              type="submit"
-              className="w-100 py-2"
-              style={{
-                backgroundColor: "#DC3545",
-                border: "none",
-                borderRadius: "30px",
-                fontWeight: "bold",
-                fontSize: "18px",
-                boxShadow: "0px 4px 10px rgba(220, 53, 69, 0.4)",
-              }}
-            >
+            <Button variant="primary" type="submit">
               Submit
             </Button>
           </Form>
@@ -192,4 +123,4 @@ const CustomNavbar = () => {
   );
 };
 
-export default CustomNavbar;
+export default ContactForm;
