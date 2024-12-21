@@ -35,7 +35,7 @@ const OurTeam = () => {
   return (
     <Container
       id="team"
-      className="py-4"
+      className="te-py-4"
       style={{ paddingTop: "80px", marginTop: "-50px" }} // Adjustments for fixed navbar
     >
       <h1 className="text-center mb-4" style={{ fontWeight: "bold",color:"black" }}>

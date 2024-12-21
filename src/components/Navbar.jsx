@@ -93,7 +93,7 @@ const CustomNavbar = () => {
           <Navbar.Collapse id="navbarScroll">
             <Nav className="ms-auto">
               <Nav.Link
-                //onClick={handleScrollToTop}
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} // Scroll to the top smoothly
                 className="me-3"
                 style={{ textDecoration: "none", color: "black", fontWeight: "normal" }}
               >
@@ -259,3 +259,4 @@ const CustomNavbar = () => {
 };
 
 export default CustomNavbar;
+ 

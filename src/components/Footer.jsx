@@ -66,7 +66,7 @@ const Footer = () => {
                   smooth={true}
                   duration={10}
                   offset={-70}
-                  className="text-white text-decoration-none"
+                  className ="text-white text-decoration-none"
                 >
                   Courses
                 </Link>
