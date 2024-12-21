@@ -38,7 +38,7 @@ const OurTeam = () => {
       className="te-py-4"
       style={{ paddingTop: "80px", marginTop: "-50px" }} // Adjustments for fixed navbar
     >
-      <h1 className="text-center mb-4" style={{ fontWeight: "bold",color:"black" }}>
+      <h1 className="m-text-center mb-4" style={{ fontWeight: "bold",color:"black",textAlign:"center" }}>
         Meet Our Team
       </h1>
       <Row className="g-4">
