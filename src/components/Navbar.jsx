@@ -71,7 +71,7 @@ const CustomNavbar = () => {
     setTimeout(() => {
       setIsFormSubmitted(false);
       handleModalClose();
-    }, 1500);
+    }, 2500);
   };
 
   return (
