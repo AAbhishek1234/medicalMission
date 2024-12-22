@@ -10,9 +10,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-dark text-white py-4">
+    <footer className="bg-dark text-white py-4" style={{marginTop:"1rem"}}>
       <Container>
-        <Row className="gy-4">
+        <Row className="gy-4" >
           {/* About Section */}
           <Col md={4}>
             <h5>Medical Mission</h5>
