@@ -1,67 +1,55 @@
-/* General Card Styling */
+/* Team Section Container */
+.team-container {
+  background-color:white !important;
+  margin-top: -2rem !important;
+}
+
+/* Header Styles */
+.team-header .team-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: black !important;
+}
+
+/* Team Card Styles */
 .team-card {
-    border: none; /* Remove default border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    border-radius: 10px; /* Rounded corners */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  border-radius: 10px;
+  border: none !important;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* .team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+} */
+
+/* Team Card Image */
+.team-card-img {
+  height: 300px;
+  width: 100%;
+  object-fit: fill !important;
+}
+
+/* Team Card Title */
+.team-card-title {
+  font-size: 1.3rem;
+  text-align: center !important;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Team Card Subtitle */
+.team-card-subtitle {
+  font-size: 1.1rem;
+  color: #6c757d;
+  text-align: center !important;
+}
+@media(max-width:768px){
+  .team-card-img{
+    object-fit: fill !important;
+    height: 320px !important;
+
   }
-  
-  .team-card:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
-  }
-  
-  /* Image Styling */
-  .team-card img {
-    height: 300px !important;
-    object-fit: fill; /* Ensures images fit the card */
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-  
-  /* Card Title Styling */
-  .team-card .card-title {
-    font-size: 1.2rem !important;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  /* Responsive Styling */
-  @media (max-width: 576px) {
-    /* Adjust card image height for smaller screens */
-    .team-card img {
-      height: 350px !important; /* Reduce image height */
-      object-fit: cover; /* Maintain aspect ratio */
-    }
-  .m-text-center{
-    font-size: 2rem !important;
-    font-weight: bold !important;
-    text-align: center !important;
-  }
-    /* Adjust card title size */
-    .team-card .card-title {
-      font-size: 1rem; /* Reduce title size for smaller screens */
-    }
-  
-    /* Add padding for smaller screens */
-    .team-card {
-      margin: 0 10px; /* Add horizontal margin */
-    }
-  
-  }
-  
-  @media (max-width: 768px) {
-    /* Adjust card image height for medium-small screens */
-    .team-card img {
-      height: 350px !important; /* Slightly reduce image height */
-    }
-  
-    /* Adjust card title size */
-    .team-card .card-title {
-      font-size: 1.2rem !important; /* Slightly smaller title size */
-    }
-   
-  }
-  .te-py-4{
-    margin-top: -7rem !important;
-  }
+}

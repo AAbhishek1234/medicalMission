@@ -13,6 +13,7 @@ import Headlines from '../components/headlines'
 import Footer from '../components/Footer'
 import Team from '../components/Team'
 import Gallery from '../components/Gallery'
+import Alumni from '../components/Alumni'
 //import VectorAnimation from '../components/VectorAnimation'
 
 function Home() {
@@ -23,6 +24,7 @@ function Home() {
     <OurSuccess></OurSuccess>
     <JobReady></JobReady>
     <Team></Team>
+    <Alumni></Alumni>
     {/* <AboutUs></AboutUs> */}
     <SE></SE>
     <Partners></Partners>

@@ -125,6 +125,19 @@ const CustomNavbar = () => {
               </Nav.Link>
               <Nav.Link>
                 <Link
+                  to="alumni"
+                  smooth={true}
+                  duration={10}
+                  offset={-60}
+                  className="me-3"
+                  style={{ textDecoration: "none", color: "black", fontWeight: "normal" }}
+                >
+                  Alumni
+                </Link>
+                </Nav.Link>
+
+              <Nav.Link>
+                <Link
                   to="gallery"
                   smooth={true}
                   duration={10}
@@ -137,16 +150,6 @@ const CustomNavbar = () => {
               </Nav.Link>
             </Nav>
             <div className="d-flex flex-column flex-md-row align-items-left gap-2">
-              <a
-                href="tel:+91 8750768101"
-                style={{
-                  fontSize: "20px",
-                  textDecoration: "none",
-                  color: "black",
-                }}
-              >
-                +91 8750768101
-              </a>
               <Button variant="outline-danger" onClick={handleModalShow}>
                 Apply Now
               </Button>
