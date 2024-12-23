@@ -6,7 +6,7 @@ import "./team.css"; // Import the external CSS
 const Team = () => {
   const alumniData = [
     {
-      name: "UMESH BHARTI",
+      name: "Umesh Bharti",
       designation: "Director",
       photo: "/Images/CEO.jpg",
     },
@@ -35,7 +35,7 @@ const Team = () => {
   return (
     <Container fluid className="team-container py-5" id="team">
       <div className="team-header text-center mb-5">
-        <h1 className="team-title">Meet Our Team</h1>
+        <h1 className="team-title"> Our Team</h1>
       </div>
 
       <Row className="g-4">

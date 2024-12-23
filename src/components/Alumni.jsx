@@ -5,23 +5,23 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const Alumni = () => {
   const alumniData = [
     {
-      name: "RUBASHA AHMAD (MLT)",
-      designation: "AIIMS, DELHI",
+      name: "Rubasha Ahmad (MLT)",
+      designation: "AIIMS, Delhi",
       photo: "/Images/alumni1.jpg", // Replace with actual image URL
     },
     {
-      name: "NITIN ADHANA (RMIT)",
-      designation: "ESIC, FARIDABAD",
+      name: "Nitin Adhana (RMIT)",
+      designation: "ESIC, Faridabad",
       photo: "/Images/alumni2.jpg", // Replace with actual image URL
     },
     {
-      name: "RAJESH BHAGEL (OTT)",
-      designation: "SSB, FARIDABAD",
+      name: "Rajesh Bhagel (OTT)",
+      designation: "SSB, Faridabad",
       photo: "/Images/alumni3.jpg", // Replace with actual image URL
     },
     {
-      name: "AMAN RAWAT (MLT)",
-      designation: "AIIMS, DELHI",
+      name: "Aman Rawat (MLT)",
+      designation: "AIIMS, Delhi",
       photo: "/Images/alumni4.jpg", // Replace with actual image URL
     },
   ];
@@ -42,7 +42,7 @@ const Alumni = () => {
         </p>
       </div>
 
-      <Row className="g-4">
+      <Row className="g-4" style={{fontFamily:"Merriweather"}}>
         {alumniData.map((alumnus, index) => (
           <Col xs={12} sm={6} md={4} lg={3} key={`alumnus-${index}`}>
             <Card
@@ -71,7 +71,7 @@ const Alumni = () => {
                 </Card.Title>
                 <Card.Subtitle
                   className="mb-2 text-muted"
-                  style={{ fontSize: "0.9rem" }}
+                  style={{ fontSize: "1.1rem" }}
                 >
                   {alumnus.designation}
                 </Card.Subtitle>
