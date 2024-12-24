@@ -19,7 +19,7 @@ const CustomComponent = () => {
         </Col>
       </Row>
       <p className="hd-text-light fs-5">
-        Over healthcare organisations are joining hands with us to provide successful careers to our students after completing one of the many paramedical courses from MedicalMission.
+        Over healthcare organisations are joining hands with us to provide successful careers to our students after completing one of the many paramedical courses from Medical Mission.
       </p>
 
       {isMobile ? (

@@ -127,7 +127,7 @@ const HeroSection = () => {
   
 
   return (
-    <Container fluid className="hero-section bg-light px-0">
+    <Container fluid className="hero-section bg-light px-0" style={{marginTop:"5rem"}}>
       <Row className="align-items-center text-center text-md-start m-0">
         {/* Mobile View */}
         <Col xs={12} className="d-md-none mb-3">

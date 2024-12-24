@@ -69,6 +69,7 @@
    
    .placement-section {
     background: linear-gradient(to right, #4e54c8, #8f94fb) !important;
+    font-family: 'Merriweather', serif !important;
   }
   
   .company-card:hover {
