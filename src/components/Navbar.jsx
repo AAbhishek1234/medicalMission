@@ -141,7 +141,7 @@ const CustomNavbar = () => {
                   to="gallery"
                   smooth={true}
                   duration={10}
-                  offset={-80}
+                  offset={-60}
                   className="me-3"
                   style={{ textDecoration: "none", color: "black", fontWeight: "normal" }}
                 >
