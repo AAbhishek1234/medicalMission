@@ -26,12 +26,14 @@
 }
 
 .custom-image {
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px white !important;
+  border-radius: 2.5rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Enhanced box shadow */
   height: 30rem !important; /* Laptop view */
-  width: 25rem !important;  /* Laptop view */
-  margin-left: 8rem !important;
+  width: 35rem !important;  /* Laptop view */
+  margin-left: 1rem !important;
 }
+
 
 @media (max-width: 768px) {
   .custom-text-section {

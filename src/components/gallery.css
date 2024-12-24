@@ -1,58 +1,86 @@
-/* Overall Gallery Container */
+/* Gallery Container */
 .gallery-container {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    padding: 2rem 1rem;
+  padding: 60px 10px !important;
+  background-color: #f0f0f0;
+}
+
+/* Gallery Title */
+.gallery-title {
+  font-family: 'Arial', sans-serif;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+/* Wrapper for Each Image */
+.gallery-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+  margin-bottom: 15px;
+}
+
+/* Image Hover Effect */
+.gallery-image-wrapper:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure all images have the same height and width */
+.gallery-image {
+  width: 100%;
+  height: 300px; /* Fixed height for consistency */
+  object-fit: fill;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Image Hover Transform */
+.gallery-image-wrapper:hover .gallery-image {
+  transform: scale(1.1);
+}
+
+/* Modal Customization */
+.modal-content {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 12px;
+  padding: 0;
+}
+
+.modal-body {
+  padding: 0;
+}
+
+.modal-body img {
+  border-radius: 12px;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .gallery-title {
+    font-size: 2.3rem;
   }
-  
-  /* Title Styling */
+
+  .gallery-image {
+    height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
   .gallery-title {
     font-size: 2rem;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 2rem;
   }
-  
-  /* Image Wrapper */
-  .gallery-image-wrapper {
-    height: 250px !important; /* Ensures all images have the same height */
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
-  }
-  
-  /* Image Styling */
+
   .gallery-image {
-    width: 100%;
-    height: 100% !important;
-    object-fit: fill; /* Ensures images fit perfectly without distortion */
-    transition: transform 0.3s ease;
+    height: 220px;
   }
-  
-  .gallery-image-wrapper:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .gallery-image-wrapper:hover .gallery-image {
-    transform: scale(1.1); /* Subtle zoom effect on hover */
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 576px) {
-    .gallery-title {
-      font-size: 2rem !important;
-    }
-    .gallery-image-wrapper {
-      height: 290px !important; /* Reduce height for smaller devices */
-    }
-  }
-  #gallery {
-    scroll-margin-top: 80px; /* Adjust based on your navbar's height */
-  }
-  
+}

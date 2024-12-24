@@ -10,7 +10,7 @@ const JobReady = () => {
         <Col xs={{ order: 1 }} md={{ span: 6, order: 2 }} className="custom-image-section text-center">
           <Card className="border-0">
             <Image
-              src="/Images/machineCopy.jpg" // Replace with your actual image path
+              src="/Images/wmremove-transformed.jpeg" // Replace with your actual image path
               alt="Healthcare Professional"
               className="custom-image"
               fluid

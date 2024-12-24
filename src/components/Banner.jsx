@@ -77,8 +77,8 @@
 
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import image1 from "./b1-removebg-preview.png";
-import image2 from "./b2-removebg-preview.png";
+import image1 from "./hero1-removebg-preview.png";
+import image2 from "./hero2-removebg-preview.png";
 import "./banner.css";
 
 const HeroSection = () => {
