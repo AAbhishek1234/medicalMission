@@ -1,7 +1,7 @@
 /* Team Section Container */
 .team-container {
   background-color:white !important;
-  margin-top: -4rem !important;
+  margin-top: -2rem !important;
   font-family: 'Merriweather', serif !important;
 }
 
@@ -54,6 +54,6 @@
 
   }
   .team-container{
-    margin-top: -7rem !important;
+    margin-top: 0rem !important;
   }
 }

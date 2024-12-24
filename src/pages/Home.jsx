@@ -14,6 +14,7 @@ import Footer from '../components/Footer'
 import Team from '../components/Team'
 import Gallery from '../components/Gallery'
 import Alumni from '../components/Alumni'
+import Courses from '../components/Courses'
 //import VectorAnimation from '../components/VectorAnimation'
 
 function Home() {
@@ -23,6 +24,7 @@ function Home() {
     <Banner></Banner>
     <OurSuccess></OurSuccess>
     <JobReady></JobReady>
+    <Courses></Courses>
     <Team></Team>
     <Alumni></Alumni>
     {/* <AboutUs></AboutUs> */}

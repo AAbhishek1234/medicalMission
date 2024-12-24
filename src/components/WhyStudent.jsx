@@ -7,10 +7,10 @@ import "./whystudent.css"; // Add custom styles here
 const testimonials = [
   {
     id: 1,
-    name: "Rajneesh",
+    name: "Rajesh Baghel",
     text: "I learned a lot through fun activities and different teaching methods at Medical Mission. ",
-    company: "Placed with Orthotech India Pvt.Ltd",
-    image: "/Images/carry.jpeg",
+    company: "Placed with SSB Hospital",
+    image: "/Images/alumni3.jpg",
   },
   {
     id: 2,

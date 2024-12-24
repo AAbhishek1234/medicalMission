@@ -1,0 +1,100 @@
+/* .courses-container {
+    background-color:		#FFFAF0 !important; 
+    padding: 40px 0;
+  }
+  
+  .courses-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: black !important; 
+  }
+  
+  .courses-subtitle {
+    font-size: 1.2rem;
+    color: black !important;
+    margin-bottom: 20px;
+  }
+  
+  .course-card {
+    border-radius: 5px;
+    background: #ffffff; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+ 
+  }
+  
+  .course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .course-card-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: black !important; 
+  }
+  
+  .course-card-text {
+    font-size: 1rem;
+    color: black !important;
+    margin-top: 10px;
+  }
+  
+  .course-duration {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: black !important; 
+  }
+  
+   */
+
+
+
+
+   .courses-container {
+    background: linear-gradient(145deg, #fbc2eb, #a6c1ee);
+
+    padding: 40px 20px; /* Space between screen edges and container */
+    overflow: hidden !important;
+  }
+  
+  .courses-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: black !important; /* Dark slate color */
+  }
+  
+  .courses-subtitle {
+    font-size: 1.2rem;
+    color: black !important; /* Muted gray */
+    margin-bottom: 20px;
+  }
+  
+  .course-card {
+    border-radius: 8px;
+    background: #ffffff; /* White background for the card */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .course-card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color:black !important; /* Slate color */
+  }
+  
+  .course-card-text {
+    font-size: 1rem;
+    color: black !important;
+    margin-top: 10px;
+  }
+  
+  .course-duration {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: black !important; /* Lighter muted gray */
+  }
+ 

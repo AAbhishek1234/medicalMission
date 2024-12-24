@@ -34,25 +34,25 @@ const CustomComponent = () => {
         >
           <SwiperSlide>
             <Card className="shadow border-0">
-              <Card.Img variant="top" src="/Images/frt.jpg" />
+              <Card.Img variant="top" src="/Images/blogsn1.jpg"/>
               <Card.Body>
-                <Card.Title>Innovative Solutions</Card.Title>
+                <Card.Title>Healing Beyond Borders</Card.Title>
               </Card.Body>
             </Card>
           </SwiperSlide>
           <SwiperSlide>
             <Card className="shadow border-0">
-              <Card.Img variant="top" src="/Images/ftre.png" />
+              <Card.Img variant="top"  src="/Images/blogsn2.jpg" />
               <Card.Body>
-                <Card.Title>Creative Insights</Card.Title>
+                <Card.Title>Bridging Lives with Care</Card.Title>
               </Card.Body>
             </Card>
           </SwiperSlide>
           <SwiperSlide>
             <Card className="shadow border-0">
-              <Card.Img variant="top" src="/Images/learing.webp" />
+              <Card.Img variant="top" src="/Images/blogsn3.jpg"/>
               <Card.Body>
-                <Card.Title>Advanced Technology</Card.Title>
+                <Card.Title>The Care Chronicles</Card.Title>
               </Card.Body>
             </Card>
           </SwiperSlide>
@@ -61,25 +61,25 @@ const CustomComponent = () => {
         <Row className="g-4">
           <Col xs={12} sm={4}>
             <Card className="shadow border-0">
-              <Card.Img variant="top" src="/Images/frt.jpg" />
+              <Card.Img variant="top" src="/Images/blogsn1.jpg" />
               <Card.Body>
-                <Card.Title>Innovative Solutions</Card.Title>
+                <Card.Title>Healing Beyond Borders</Card.Title>
               </Card.Body>
             </Card>
           </Col>
           <Col xs={12} sm={4}>
             <Card className="shadow border-0">
-              <Card.Img variant="top" src="/Images/ftre.png" />
+              <Card.Img variant="top" src="/Images/blogsn2.jpg" />
               <Card.Body>
-                <Card.Title>Creative Insights</Card.Title>
+                <Card.Title>Bridging Lives with Care</Card.Title>
               </Card.Body>
             </Card>
           </Col>
           <Col xs={12} sm={4}>
             <Card className="shadow border-0">
-              <Card.Img variant="top" src="/Images/learing.webp" />
+              <Card.Img variant="top" src="/Images/blogsn3.jpg" />
               <Card.Body>
-                <Card.Title>Advanced Technology</Card.Title>
+                <Card.Title>The Care Chronicles</Card.Title>
               </Card.Body>
             </Card>
           </Col>
