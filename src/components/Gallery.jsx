@@ -16,7 +16,7 @@ const Gallery = () => {
   ];
 
   return (
-    <Container  id="gallery"className="gallery-container py-5">
+    <Container  id="gallery" className="gallery-container py-5">
       <h1 className="text-center mb-4 gallery-title" style={{fontWeight:"bold",fontSize:"2.5rem",color:"black"}}>Our Gallery</h1>
       <Row className="g-3">
         {galleryImages.map((image, index) => (
