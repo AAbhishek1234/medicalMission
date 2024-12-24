@@ -7,12 +7,9 @@
 /* Gallery Title */
 .gallery-title {
   font-family: 'Merriweather', serif !important;  
-  font-size: 2.5rem;
+  /* font-size: 2.5rem; */
   color: #000000 !important;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 30px;
+  font-weight: bold !important;
 }
 
 /* Wrapper for Each Image */
@@ -28,10 +25,10 @@
 }
 
 /* Image Hover Effect */
-.gallery-image-wrapper:hover {
+/* .gallery-image-wrapper:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
+} */
 
 /* Ensure all images have the same height and width */
 .gallery-image {

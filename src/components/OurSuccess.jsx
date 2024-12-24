@@ -77,7 +77,7 @@ const SuccessSection = () => {
             style={{ width: "60px", height: "60px" }}
           />
           <h2 className="fw-bold">
-            {inView ? <Counter start={0} end={20} duration={1000} /> : "20"}+
+            {inView ? <Counter start={0} end={2} duration={2} /> : "2"}+
           </h2>
           <p className="mm-text-muted">Campuses Across India</p>
         </Col>
