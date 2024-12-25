@@ -31,7 +31,7 @@ const testimonials = [
     name: "Rani",
     text: "Medical Mission provided a supportive and friendly learning environment that made me feel comfortable.",
     company: "Placed with Standup India",
-    image: "/Images/Rani.png",
+    image: "/Images/RANI.png",
   },
 ];
 
