@@ -4,16 +4,16 @@ import "./gallery.css";
 
 const Gallery = () => {
   const galleryImages = [
-    "/Images/g1.jpg",
-    "/Images/g9.jpg",
-    "/Images/g2.jpg",
+    // "/Images/g1.jpg",
+    // "/Images/g9.jpg",
+    "/Images/gnew2.jpg",
     "/Images/gnew8.jpg",
     "/Images/g10.jpg",
     "/Images/g6.jpg",
     "/Images/g77.jpg",
     "/Images/gnew4.jpg",
     "/Images/gnew5.jpg",
-    "/Images/gnew2.jpg",
+    "/Images/g88.jpg",
     "/Images/gnew6.jpg",
     "/Images/gnew7.jpg",
   ];
