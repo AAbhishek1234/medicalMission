@@ -164,15 +164,16 @@ const CustomNavbar = () => {
         onHide={handleModalClose}
         centered
         dialogClassName="custom-modal"
+       
       >
-        <Modal.Header closeButton>
-          <Modal.Title className="text-center w-100">
+        <Modal.Header closeButton style={{backgroundColor:"white"}} >
+          <Modal.Title className="text-center w-100" style={{backgroundColor:"white"}} >
             <span style={{ fontSize: "24px", fontWeight: "bold", color: "#DC3545" }}>
               Join Us Today!
             </span>
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body className="p-4">
+        <Modal.Body className="p-4" style={{backgroundColor:"white"}}>
           {isFormSubmitted ? (
             <div className="text-center">
               <h5 className="text-success">Thank you for your submission!</h5>
