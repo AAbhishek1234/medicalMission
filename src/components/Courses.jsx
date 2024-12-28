@@ -17,7 +17,9 @@ const Courses = () => {
     { title: "Radiology & Medical Imagine Technology", bgColor: "#FFE7CC" },
     { title: "Optometry Technology", bgColor: "#FFF1C1" },
     { title: "Hospital Management", bgColor: "#E9F2F9" },
-
+    { title: "Auxiliary Nurse Midwifery(ANM)", bgColor: "#FFE5D9" },
+    { title: "General Nursing and Midwifery(GNM)", bgColor: "#FFCCD5" },
+    { title: "Community Medical Service & Essential Drugs(CSMED)", bgColor: "#D4E8D4" },
   ];
 
   return (

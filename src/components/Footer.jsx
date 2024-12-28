@@ -90,13 +90,13 @@ const Footer = () => {
           <Col md={4}>
             <h5>Follow Us</h5>
             <div className="d-flex gap-3">
-              <a href="https://facebook.com" className="text-white">
+              <a href="https://www.facebook.com/profile.php?id=61551478131463" className="text-white">
                 <i className="bi bi-facebook fs-4"></i>
               </a>
               <a href="https://twitter.com" className="text-white">
                 <i className="bi bi-twitter fs-4"></i>
               </a>
-              <a href="https://instagram.com" className="text-white">
+              <a href="https://www.instagram.com/" className="text-white">
                 <i className="bi bi-instagram fs-4"></i>
               </a>
               <a href="https://linkedin.com" className="text-white">

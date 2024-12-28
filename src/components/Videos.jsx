@@ -1,73 +1,83 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./videos.css"; // Custom CSS file
 
-const VideoCard = ({ videoSrc, name, title }) => {
+const VideoCard = ({ videoSrc, isMobile }) => {
   return (
-    <Card className="h-100 shadow-sm video-card">
-      <Card.Body className="text-center">
-        {/* Video */}
-        <div className="ratio ratio-16x9 mb-3">
-          <iframe
-            src={videoSrc}
-            title={name}
-            allowFullScreen
-            className="rounded"
-          ></iframe>
-        </div>
-
-        {/* Name */}
-        <Card.Title className="fw-bold">{name}</Card.Title>
-
-        {/* Title */}
-        <Card.Text className="text-muted">{title}</Card.Text>
-      </Card.Body>
-    </Card>
+    <div
+      className="text-center"
+      style={{ marginBottom: isMobile ? "2rem" : "0" }}
+    >
+      <div
+        className="ratio"
+        style={{
+          aspectRatio: "16/9",
+          height: isMobile ? "auto" : "360px", // Auto height for mobile
+        }}
+      >
+        <iframe
+          src={videoSrc}
+          title="YouTube Video"
+          allowFullScreen
+          className="rounded w-100 h-100"
+          style={{ border: "none" }}
+        ></iframe>
+      </div>
+    </div>
   );
 };
 
 const VideoCardsSection = () => {
   const cardData = [
     {
-      videoSrc: "https://www.youtube.com/embed/tgbNymZ7vqY",
-      name: "John Doe",
-      title: "Healthcare Specialist",
-    },
-    {
-      videoSrc: "https://www.youtube.com/embed/tgbNymZ7vqY",
-      name: "Jane Smith",
-      title: "Paramedic Trainee",
-    },
-    {
-      videoSrc: "https://www.youtube.com/embed/tgbNymZ7vqY",
-      name: "Michael Johnson",
-      title: "Medical Practitioner",
+      videoSrc: "https://www.youtube.com/embed/nrm8Rjgsy4k",
     },
   ];
 
-  return (
-    <Container className="py-5" style={{ marginTop: "-3rem" }}>
-      {/* Section Heading */}
-      
-      {/* Mobile View (1 Card at a Time) */}
-      <div className="d-lg-none">
-        {cardData.map((card, index) => (
-          <Row key={index} className="g-4 mb-3 justify-content-center">
-            <Col xs={12} md={8}>
-              <VideoCard {...card} />
-            </Col>
-          </Row>
-        ))}
-      </div>
+  // Check if mobile view using screen size
+  const isMobile = window.innerWidth <= 768;
 
-      {/* Desktop View (3 Cards) */}
-      <Row className="g-4 d-none d-lg-flex">
-        {cardData.map((card, index) => (
-          <Col xs={12} md={6} lg={4} key={index}>
-            <VideoCard {...card} />
-          </Col>
-        ))}
+  return (
+    <Container className="py-5" style={{ backgroundColor: "white" }}>
+      <Row className="align-items-center">
+        {/* Left Section - Heading and Paragraph */}
+        <Col
+          xs={12}
+          md={6}
+          className={`text-md-start mb-4 mb-md-0 ${isMobile ? "text-center" : ""} order-1 order-md-1`}
+        >
+          <h1
+            className="hding-fw-bold"
+            style={{
+              color: "black",
+              marginBottom: "1rem",
+            }}
+          >
+            Watch Us on YouTube
+          </h1>
+          <p
+          className="parag"
+            style={{
+              color: "black",
+              marginBottom: "1.5rem",
+              textAlign: isMobile ? "center" : "left",
+            }}
+          >
+            Discover the latest insights, tips, and updates from the world of
+            healthcare and professional growth on our YouTube channel. Watch
+            engaging videos that inspire, educate, and guide you toward building
+            a successful career. From expert interviews to in-depth tutorials,
+            we’ve got you covered. Subscribe now to stay connected and informed!
+          </p>
+        </Col>
+
+        {/* Right Section - Video */}
+        <Col xs={12} md={6} className="order-2 order-md-2">
+          {cardData.map((card, index) => (
+            <VideoCard key={index} videoSrc={card.videoSrc} isMobile={isMobile} />
+          ))}
+        </Col>
       </Row>
     </Container>
   );

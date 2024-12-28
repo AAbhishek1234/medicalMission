@@ -153,7 +153,13 @@ const HeroSection = () => {
                 Enquire Now
               </Button>
             </a>
-            <Button variant="outline-danger">▶ Watch Video</Button>
+            {/* <Button variant="outline-danger">▶ Watch Video</Button> */}
+            <Button
+          variant="outline-danger"
+          onClick={() => window.open("https://www.youtube.com/@medicalmission8392")} // Opens in a new tab
+        >
+          ▶ Watch Video
+        </Button>
           </div>
         </Col>
 
