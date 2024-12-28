@@ -49,6 +49,7 @@ const StudentSlider = () => {
         {/* Left Section: Heading and Text */}
         <Col md={5} xs={12} className="text-md-start text-center mb-4 mb-md-0">
           <h1
+          className="why"
             style={{
               fontSize: "2.8rem",
               fontWeight: "bold",
