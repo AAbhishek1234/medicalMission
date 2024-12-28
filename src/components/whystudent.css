@@ -33,6 +33,7 @@
     }
   .why{
     font-size: 2rem !important;
+    font-family: 'Merriweather', serif !important;
   }
    
   }
@@ -47,7 +48,10 @@
       height: 50px;
     }
   
-  
+    .why{
+      font-size: 1.8rem !important;
+      font-family: 'Merriweather', serif !important;
+    }
   
    
   }

@@ -14,7 +14,7 @@
 /* Media query for laptop/desktop view */
 @media (min-width: 768px) {
   .hding-fw-bold {
-    font-size: 2.8rem !important; /* Larger font size for heading in laptop view */
+    font-size: 2rem !important; /* Larger font size for heading in laptop view */
     font-family: 'Merriweather', serif !important;
     font-weight: bold !important;
     color: black !important;

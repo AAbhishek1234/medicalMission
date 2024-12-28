@@ -30,7 +30,7 @@ const Gallery = () => {
 
   return (
     <Container id="gallery" className="gallery-container py-5">
-      <h1 className="text-center mb-5 gallery-title">Our Gallery</h1>
+      <h1 className="text-center mb-5 gallery-title" style={{fontFamily: 'Merriweather'}}>Our Gallery</h1>
       <Row className="g-4">
         {galleryImages.map((image, index) => (
           <Col key={index} xs={12} sm={6} md={4} lg={3}>
