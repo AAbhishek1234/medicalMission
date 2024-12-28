@@ -56,7 +56,7 @@
 
 /* Desktop Carousel */
 .desktop-carousel {
-  height: 500px !important; /* Default height for large screens */
+  height: 450px !important; /* Default height for large screens */
   width: 100%;
   position: relative;
 }
